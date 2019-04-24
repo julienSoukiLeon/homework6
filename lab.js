@@ -18,7 +18,7 @@ function addButtonPressed()
 {
     var input = document.getElementById("addInput");
     
-    if (!input || input == "")
+    if (!input.value || input.value == "")
         location.reload();
     var content = input.value;
 
