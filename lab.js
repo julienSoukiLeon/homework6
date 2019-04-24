@@ -17,6 +17,9 @@ addButton.addEventListener("click", function() {addButtonPressed()})
 function addButtonPressed()
 {
     var input = document.getElementById("addInput");
+    
+    if (!input || input == "")
+        location.reload();
     var content = input.value;
 
     firebase.database().ref('todo/' + content).set({
